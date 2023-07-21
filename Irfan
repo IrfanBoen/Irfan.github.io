@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IT Student Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f1f1f1;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+header h2 {
+  font-size: 18px;
+  color: #777;
+  margin-top: 10px;
+}
+
+
+section {
+  margin-bottom: 40px;
+}
+
+section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+section p {
+  color: #777;
+  line-height: 1.5;
+}
+
+section .project {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+section .project:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Style the calculator */
+.calculator {
+  max-width: 200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+}
+
+#display {
+  width: 100%;
+  height: 30px;
+  font-size: 18px;
+  text-align: right;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 5px;
+}
+
+button {
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #f1f1f1;
+}
+
+button:active {
+  background-color: #ddd;
+}
+/* Add these styles to your existing styles.css file or create a new one */
+
+.project1 {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.project1 h3 {
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.clock {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid #007bff;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+/* Center the clock in the project box */
+.project1 .clock {
+  margin: 0 auto;
+}
+
+/* Adjust the height of the project box for the clock to fit properly */
+.project1:nth-child(2) {
+  height: 140px;
+  /* You can adjust this height as needed to fit the clock nicely */
+}
+
+/* Align the clock and the calculator side by side on larger screens */
+.calculator, .clock {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Irfan Boenardi</h1>
+    <h2>IT Student at Deakin College</h2>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>My name is Irfan Boenardi, people usually call me Irfan and I am a student at Deakin College and currently majoring in Information Technology (IT). I want to make a responsive web application and in this website i will explain and show the features that it has on it.</p>
+  </section>
+
+  <section id="projects">
+    <h2>The Features</h2>
+    <div class="project">
+      <h3>Feature 1</h3>
+      <p> as a user, i want to have a calculator that i can use in this website so i can calculate it here.</p>
+
+<p>As a designer i am going to create the calculator by making the structure first at HTML by making all the buttons first like the C button + button and so on. After that all of that i go to the CSS program and make the buttons allign with each other so it will actually look like a calculator.
+      <div class="calculator">
+    <input type="text" id="display" readonly>
+    <div class="buttons">
+      <button onclick="clearDisplay()">C</button>
+      <button onclick="appendToDisplay('/')">÷</button>
+      <button onclick="appendToDisplay('*')">x</button>
+      <button onclick="appendToDisplay('7')">7</button>
+      <button onclick="appendToDisplay('8')">8</button>
+      <button onclick="appendToDisplay('9')">9</button>
+      <button onclick="appendToDisplay('-')">-</button>
+      <button onclick="appendToDisplay('4')">4</button>
+      <button onclick="appendToDisplay('5')">5</button>
+      <button onclick="appendToDisplay('6')">6</button>
+      <button onclick="appendToDisplay('+')">+</button>
+      <button onclick="appendToDisplay('1')">1</button>
+      <button onclick="appendToDisplay('2')">2</button>
+      <button onclick="appendToDisplay('3')">3</button>
+      <button onclick="calculateResult()">=</button>
+      <button onclick="appendToDisplay('0')">0</button>
+      <button onclick="appendToDisplay('.')">.</button>
+    </div>
+  </div>
+    </div>
+    <div class="project">
+      <h3>Feature 2</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <div class="clock">
+        <span id="hour">00</span>:<span id="minute">00</span>:<span id="second">00</span>
+      </div>
+    </div>
+    <div class="project">
+      <h3>Feature 3</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </section>
+
+ 
+</body>
+</html>
